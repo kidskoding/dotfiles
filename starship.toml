@@ -1,0 +1,24 @@
+[username]
+show_always = true
+format = "[$user]($style)"
+style_user = "bold yellow"
+
+[hostname]
+ssh_only = false
+format = "[@$hostname]($style)"
+style = "bold green"
+
+[directory]
+truncation_length = 3
+format = " in [$path]($style) "
+style = "bold cyan"
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[gcloud]
+disabled = true
+
+# [format]
+# format = "$username$hostname$directory"
