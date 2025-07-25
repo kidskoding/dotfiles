@@ -1,0 +1,103 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "arch_small",
+    "height": 14,
+    "width": 25,
+    "padding": {
+      "top": 2,
+      "left": 2,
+      "right": 3,
+      "bottom": 3
+    }
+  },
+  "display": {
+    "separator": " : "
+  },
+  "modules": [
+    // {
+    //   "type": "title",
+    //   "key": " "
+    // },
+    {
+      "type": "title",
+      "keyWidth": 10,
+      "format": "         {6}{7}{8}"
+    },
+    {
+      "type": "custom",
+      // "format": "┌──────────────────────────────────────────┐"
+      "format": " ─────────────────────────── "
+    },
+    {
+      "type": "os",
+      "key": "󰻀 ",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "kernel",
+      "key": " ",
+      "keyColor": "red"
+    },
+    // {
+    //   "type": "packages",
+    //   "key": "󰏗 ",
+    //   "keyColor": "green"
+    // },
+    {
+      "type": "display",
+      "key": " ",
+      "keyColor": "green"
+    },
+    {
+      "type": "wm",
+      "key": " ",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "terminal",
+      "key": " ",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "cpu",
+      "format": "{1}",
+      "key": " ",
+      "keyColor": "blue"
+    },
+    // {
+    //   "type": "gpu",
+    //   "format": "{2}",
+    //   "key": " ",
+    //   "keyColor": "magenta"
+    // },
+    // {
+    //   "type": "gpu",
+    //   "format": "{3}",
+    //   "key": " ",
+    //   "keyColor": "magenta"
+    // },
+    {
+      "type": "memory",
+      "key": "󰍛 ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "disk",
+      "key": "󰋊 ",
+      "keyColor": "150",
+      "format": "{1}/{2} ({3})"
+    },
+    {
+      "type": "localip",
+      "key": "󰩟 ",
+      "format": "{1} ({4})",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "custom",
+      "format": " ──────────────────────────── "
+    },
+    "break"
+      ]
+}

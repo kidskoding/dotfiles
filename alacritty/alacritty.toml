@@ -1,0 +1,7 @@
+general.import = [
+  "/usr/lib/node_modules/alacritty-themes/themes/Gruvbox-Dark.toml"
+]
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
