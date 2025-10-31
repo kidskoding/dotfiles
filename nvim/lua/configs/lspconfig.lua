@@ -1,19 +1,18 @@
 -- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
 
-local lspconfig = require "lspconfig"
-
 -- EXAMPLE
 local servers = { "html", "cssls", "pyright", "clangd", "gopls" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
+  vim.lsp.config(lsp, {
     on_attach = nvlsp.on_attach,
     on_init = nvlsp.on_init,
     capabilities = nvlsp.capabilities,
-  }
+  })
+  vim.lsp.enable(lsp)
 end
 
 -- configuring single server, example: typescript
@@ -23,7 +22,7 @@ end
 --   capabilities = nvlsp.capabilities,
 -- }
 
-lspconfig["rust_analyzer"].setup {
+vim.lsp.config("rust_analyzer", {
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
@@ -32,7 +31,7 @@ lspconfig["rust_analyzer"].setup {
       cargo = {
         allFeatures = true,
       },
-      checkOnSave = {
+      check = {
         command = "clippy",
       },
       assist = {
@@ -46,4 +45,19 @@ lspconfig["rust_analyzer"].setup {
       },
     },
   },
-}
+})
+vim.lsp.enable("rust_analyzer")
+
+vim.lsp.config("lua_ls", {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+    },
+  },
+})
+vim.lsp.enable("lua_ls")
