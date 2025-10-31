@@ -15,11 +15,13 @@ format = " in [$path]($style) "
 style = "bold cyan"
 read_only = " 󰌾"
 
+
 # [time]
 # disabled = false
 # time_format = "%R"
 # style = "purple"
 # format = "[ $time]($style) "
+
 
 [character]
 success_symbol = "[➜](bold green)"
@@ -68,13 +70,16 @@ symbol = " "
 [elm]
 symbol = " "
 
+
 [fennel]
 symbol = " "
 
 [fossil_branch]
 symbol = " "
 
+
 [git_branch]
+
 symbol = " "
 
 [git_commit]
@@ -85,6 +90,7 @@ symbol = " "
 
 [guix_shell]
 symbol = " "
+
 
 [haskell]
 symbol = " "
@@ -119,6 +125,7 @@ symbol = "󰆥 "
 [nix_shell]
 symbol = " "
 
+
 [nodejs]
 symbol = " "
 
@@ -148,6 +155,7 @@ Illumos = "󰈸 "
 Kali = " "
 Linux = " "
 Mabox = " "
+
 Macos = " "
 Manjaro = " "
 Mariner = " "
@@ -155,6 +163,7 @@ MidnightBSD = " "
 Mint = " "
 NetBSD = " "
 NixOS = " "
+
 Nobara = " "
 OpenBSD = "󰈺 "
 openSUSE = " "
@@ -175,6 +184,7 @@ Windows = "󰍲 "
 [package]
 symbol = "󰏗 "
 
+
 [perl]
 symbol = " "
 
@@ -184,8 +194,10 @@ symbol = " "
 [pijul_channel]
 symbol = " "
 
+
 [pixi]
 symbol = "󰏗 "
+
 
 [python]
 symbol = " "
@@ -196,11 +208,14 @@ symbol = "󰟔 "
 [ruby]
 symbol = " "
 
+
 [rust]
 symbol = "󱘗 "
 
+
 [scala]
 symbol = " "
+
 
 [swift]
 symbol = " "
@@ -208,8 +223,10 @@ symbol = " "
 [zig]
 symbol = " "
 
+
 [gradle]
 symbol = " "
+
 
 # [format]
 # format = "$username$hostname$directory"
