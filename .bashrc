@@ -32,3 +32,5 @@ alias create-notebook='python ~/create-notebook.py'
 export EDITOR=nvim
 
 export PATH=$PATH:/usr/local/go/bin
+
+fastfetch

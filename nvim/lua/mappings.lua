@@ -15,8 +15,8 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
-vim.keymap.set('n', '<C-Left>', ':bprev<CR>', { desc = 'previous buffer' })
-vim.keymap.set('n', '<C-Right>', ':bnext<CR>', { desc = 'next buffer' })
+vim.keymap.set('n', '<C-Right>', ':bprev<CR>', { desc = 'previous buffer' })
+vim.keymap.set('n', '<C-Left>', ':bnext<CR>', { desc = 'next buffer' })
 
 local function smart_bufclose()
   local buffers = vim.fn.getbufinfo({ buflisted = 1 })
