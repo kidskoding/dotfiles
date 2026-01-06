@@ -7,6 +7,8 @@ return {
 			neovim_image_text = "Neovim",
 			main_image = "neovim",
 			debounce_timeout = 10,
+      log_level = "debug",
+      buttons = true,
 		})
 	end
 }

@@ -29,8 +29,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias create-notebook='python ~/create-notebook.py'
-export EDITOR=nvim
 
+export EDITOR=nvim
 export PATH=$PATH:/usr/local/go/bin
+export MAN_POSIXLY_CORRECT=1
 
 fastfetch

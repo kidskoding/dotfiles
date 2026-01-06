@@ -65,13 +65,9 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec alacritty
 
-# start other common applications 
-bindsym $mod+Shift+f exec firefox-developer-edition
-bindsym $mod+Shift+d exec spotify
-bindsym $mod+Shift+t exec steam
-
 # Screenshot the entire desktop and copy to clipboard using scrot
-bindsym $mod+Shift+s exec --no-startup-id scrot -e 'xclip -selection clipboard -t image/png -i $f'
+# bindsym $mod+Shift+s exec --no-startup-id scrot -e 'xclip -selection clipboard -t image/png -i $f'
+bindsym $mod+Shift+s exec --no-startup-id flameshot gui -c
 
 # kill focused window
 bindsym $mod+q kill

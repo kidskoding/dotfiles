@@ -9,7 +9,13 @@ return {
   keys = {
     {
       "<C-g>",
-      "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+      function()
+        require("trouble").toggle({
+          mode  = "diagnostics", 
+          focus = true,         
+          filter = { buf = 0 },
+        })
+      end,
       desc = "Buffer Diagnostics (Trouble)",
     },
     {
