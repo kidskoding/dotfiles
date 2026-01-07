@@ -1,5 +1,6 @@
 general.import = [
-  "./themes/Gruvbox-Dark.toml"
+  # "./themes/Gruvbox-Dark.toml"
+  "./themes/rose-pine/dist/rose-pine.toml"
 ]
 
 [font.normal]
