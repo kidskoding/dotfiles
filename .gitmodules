@@ -1,0 +1,3 @@
+[submodule "nvim/nvim/palefire.nvim"]
+	path = nvim/nvim/palefire.nvim
+	url = https://github.com/kidskoding/pale-fire.nvim
