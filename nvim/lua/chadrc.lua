@@ -6,6 +6,7 @@
 local M = {}
 
 M.base46 = {
+  -- theme = "palefire"
   -- theme = "kanagawa",
   -- theme = "melange",
   theme = "rosepine"
