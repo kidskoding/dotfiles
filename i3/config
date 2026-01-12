@@ -41,7 +41,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 
 # Have i3 load background image
-exec_always --no-startup-id feh --bg-scale ~/infernape-desktop.jpg
+exec_always --no-startup-id feh --bg-scale ~/starfire-bg.jpg
 
 # Load polybar
 exec_always --no-startup-id killall polybar
