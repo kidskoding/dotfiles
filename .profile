@@ -24,3 +24,5 @@ test -z "$PROFILEREAD" && . /etc/profile || true
 #    echo
 #fi
 . "$HOME/.cargo/env"
+
+. "$HOME/.local/share/../bin/env"
