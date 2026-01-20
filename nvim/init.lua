@@ -18,16 +18,10 @@ local lazy_config = require "configs.lazy"
 -- load plugins
 require("lazy").setup({
   {
-    "NvChad/NvChad",
+    "nvchad/nvchad",
     lazy = false,
     branch = "v2.5",
     import = "nvchad.plugins",
-  },
-
-  {
-    "nvim-treesitter/nvim-treesitter",
-    lazy = false,
-    build = ":TSUpdate",
   },
 
   { import = "plugins" },

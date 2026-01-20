@@ -1,8 +1,67 @@
-general.import = [
+[general]
+# This imports your preferred theme colors first
+import = [
   "./themes/vscode-pale-fire.toml"
-  # "./themes/rose-pine/dist/rose-pine.toml"
 ]
+live_config_reload = true
+working_directory = "None"
+
+[env]
+TERM = "xterm-256color"
+WINIT_X11_SCALE_FACTOR = "1"
+
+[window]
+dynamic_padding = true 
+decorations = "none" 
+title = "Alacritty@CachyOS"
+opacity = 0.8
+
+[window.dimensions]
+columns = 100
+lines = 30
+
+[font]
+size = 12
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+[cursor]
+style = "Underline"
+thickness = 0.15
+unfocused_hollow = true
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+mouse = "Middle"
+action = "PasteSelection"
+
+[keyboard]
+bindings = [
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "F", mods = "Control|Shift", action = "SearchForward" },
+  { key = "B", mods = "Control|Shift", action = "SearchBackward" },
+  { key = "Key0", mods = "Control", action = "ResetFontSize" },
+  { key = "PageUp", mods = "Shift", action = "ScrollPageUp" },
+  { key = "PageDown", mods = "Shift", action = "ScrollPageDown" }
+]
