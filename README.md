@@ -1,3 +1,3 @@
 # dotfiles
 
-<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/0e2ccaa4-244f-4497-b2dd-154048371962" />
+<img width="1914" height="1076" alt="image" src="https://github.com/user-attachments/assets/628afe04-105a-4d6f-b955-adb538048609" />
