@@ -11,6 +11,3 @@ if type -q nvm
 end
 
 alias lsa='ls -al'
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/anirudh/projects/pm-agent/google-cloud-sdk/path.fish.inc' ]; . '/home/anirudh/projects/pm-agent/google-cloud-sdk/path.fish.inc'; end
