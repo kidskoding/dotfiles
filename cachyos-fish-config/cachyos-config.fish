@@ -1,7 +1,6 @@
 ﻿## Source from conf.d before our fish config
 source /usr/share/cachyos-fish-config/conf.d/done.fish
 
-
 ## Set values
 ## Run fastfetch as welcome message
 function fish_greeting
@@ -89,7 +88,6 @@ end
 
 ## Useful aliases
 # Replace ls with eza
-alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
 alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
 alias ll='eza -l --color=always --group-directories-first --icons'  # long format
 alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
