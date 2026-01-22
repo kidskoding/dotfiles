@@ -2,6 +2,9 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "type": "small",
+    "color": {
+      "1": "blue"
+    },
     "source": "cachyos_small",
     "width": 5,
     "padding": {

@@ -1,7 +1,7 @@
 [general]
 # This imports your preferred theme colors first
 import = [
-  "./themes/vscode-pale-fire.toml"
+  "./themes/rose-pine.toml"
 ]
 live_config_reload = true
 working_directory = "None"
