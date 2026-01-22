@@ -61,3 +61,26 @@ vim.lsp.config("lua_ls", {
   },
 })
 vim.lsp.enable("lua_ls")
+
+vim.lsp.config("texlab", {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  settings = {
+    texlab = {
+      build = {
+        onSave = true,
+        executable = "latexmk",
+        args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "-outdir=build", "%f" },
+      },
+      forwardSearch = {
+        executable = "zathura",
+        args = { "--remote-expr", "node#%line", "%p" },
+      },
+      chktex = {
+        onOpenAndSave = true,
+      },
+      diagnosticsDelay = 300,
+    },
+  },
+})

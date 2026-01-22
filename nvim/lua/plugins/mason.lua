@@ -13,6 +13,7 @@ return {
         "html-lsp",
         "css-lsp",
         "fish-lsp",
+        "texlab",
 
         -- formatters
         "stylua",
