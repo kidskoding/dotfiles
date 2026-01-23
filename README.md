@@ -1,4 +1,5 @@
 # dotfiles
 
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/afabac71-e1fc-4c23-86c6-b2997c35dab8" />
+<img width="1917" height="1079" alt="image" src="https://github.com/user-attachments/assets/a1073266-867d-4217-bef1-373d78c5b8d3" />
+
 
