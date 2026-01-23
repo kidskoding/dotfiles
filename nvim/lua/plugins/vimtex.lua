@@ -2,8 +2,7 @@ return {
   'lervag/vimtex',
   lazy = false,
   config = function()
-    vim.g.vimtex_view_method = 'zathura'
-    -- vim.g.vimtex_view_general_executable = 'zathura'
+    vim.g.vimtex_view_method = 'general'
     vim.g.vimtex_view_general_options = [[@pdf]]
     vim.g.vimtex_view_automatic = 0
     vim.g.vimtex_view_forward_search_on_start = 0
@@ -14,10 +13,16 @@ return {
     }
 
     local augroup = vim.api.nvim_create_augroup("VimtexLogic", { clear = true })
+    
     vim.api.nvim_create_autocmd("FileType", {
       group = augroup,
       pattern = "tex",
       callback = function()
+        vim.opt_local.textwidth = 80
+        vim.opt_local.formatoptions:append("t")
+        
+        vim.opt_local.wrap = false
+
         if not vim.g.vimtex_started then
           vim.g.vimtex_started = true
           vim.cmd("VimtexCompile")
