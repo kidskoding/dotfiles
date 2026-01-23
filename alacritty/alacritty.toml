@@ -1,7 +1,7 @@
 [general]
 # This imports your preferred theme colors first
 import = [
-  "./themes/rose-pine.toml"
+  "./themes/Gruvbox-Dark.toml"
 ]
 live_config_reload = true
 working_directory = "None"
