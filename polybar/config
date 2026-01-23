@@ -1,13 +1,18 @@
 [colors]
-background = #282A2E
-background-alt = #373B41
-foreground = #C5C8C6
-primary = #F0C674
-secondary = #8ABEB7
-alert = #A54242
-separator-color = #707880 
-# disabled = #707880
-disabled = #8c4b4b
+background = #282828
+background-alt = #3c3836
+foreground = #ebdbb2
+foreground-alt = #a89984
+
+warning = #fabd2f
+secondary = #83a598
+alert = #fb4934
+disabled = #928374
+
+green  = #b8bb26
+aqua   = #8ec07c
+orange = #fe8019
+purple = #d3869b
 
 [bar/example]
 width = 100%
@@ -15,6 +20,7 @@ height = 24pt
 radius = 6
 fixed-center = true
 
+; Using the variables defined above
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -27,21 +33,20 @@ padding-right = 1
 module-margin = 1
 
 separator = |
-separator-foreground = ${colors.separator-color}
+separator-foreground = ${colors.disabled}
 
 font-0 = "JetBrainsMono Nerd Font:style=Medium:size=10;3"
 font-1 = "JetBrainsMono Nerd Font:size=12;3"
 font-2 = "Font Awesome 5 Free:style=Solid:size=10;3"
 font-3 = "Font Awesome 5 Brands:style=Solid:size=10;3"
 
-modules-left = i3 xwindow
-modules-right = youtube spotify pulseaudio wlan backlight battery date time
+modules-left = i3
+modules-right = spotify pulseaudio wlan backlight battery date time
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 enable-ipc = true
 
-# Essential for i3 tiling window managers
 wm-restack = i3
 
 [module/i3]
@@ -51,12 +56,12 @@ index-sort = true
 wrapping-scroll = false
 
 label-mode-padding = 2
-label-mode-foreground = ${colors.foreground}
-label-mode-background = ${colors.primary}
+label-mode-foreground = ${colors.background}
+label-mode-background = ${colors.warning}
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline = ${colors.primary}
+label-focused-underline = ${colors.warning}
 label-focused-padding = 1
 
 label-unfocused = %index%
@@ -66,78 +71,69 @@ label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:60:...%
-
 [module/pulseaudio]
 type = internal/pulseaudio
-
-# format-volume includes the icon (ramp) and the percentage (label)
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
+label-volume-foreground = ${colors.foreground}
 
-# Icon to show when muted
-label-muted = %{F#8c4b4b}󰝟%{F-}  muted
+label-muted = %{F#fb4934}󰝟 %{F-} muted
+label-muted-foreground = ${colors.disabled}
 
-# Icons for different volume levels
-ramp-volume-0 = 󰝟
+ramp-volume-0 = 󰕿
 ramp-volume-1 = 󰖀
 ramp-volume-2 = 󰕾
+ramp-volume-foreground = ${colors.aqua}
 
 [network-base]
 type = internal/network
 interval = 5
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-disconnected = %{F#8c4b4b}󰤮 %{F-} disconnected
+label-disconnected = %{F #fb4934}󰤮 %{F-} disconnected
 label-disconnected-foreground = ${colors.disabled}
 
 [module/wlan]
 inherit = network-base
 interface-type = wireless
-label-connected = %{F#F0C674}󰖩 %{F-} %essid%
+label-connected = %{F#b8bb26}󰖩 %{F-} %essid%
 
 [module/backlight]
 type = internal/backlight
 card = intel_backlight
-
-format = %{F#F0C674}<ramp>%{F-} <label>
+format = <ramp> <label>
 label = %percentage%%
-
-ramp-0 = 󰃞 
-ramp-1 = 󰃟 
-ramp-2 = 󰃠 
+ramp-0 = 󰃞
+ramp-1 = 󰃟
+ramp-2 = 󰃠
+ramp-foreground = ${colors.warning}
 
 [module/battery]
 type = internal/battery
-
 full-at = 99
 low-at = 20
-
-# Use the command `ls -1 /sys/class/power_supply/` to confirm these names
 battery = BAT0
 adapter = ADP1
-
-poll-interval = 2
-
-# Formatting
-format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
+poll-interval = 0.2
 
 label-charging = %percentage%%
+format-charging = <animation-charging> <label-charging>
+
 label-discharging = %percentage%%
+format-discharging = <ramp-capacity> <label-discharging>
 
-label-full = 󰁹 %percentage%%
-label-low = 󰂃 LOW
+label-full = %{F#b8bb26}󰁹%{F-} %percentage%%
+label-low = %{F#fb4934}󰂃 LOW%{F-}
 
-# Icons for charging and capacity
-ramp-capacity-0 = 󰁺
-ramp-capacity-1 = 󰁼
-ramp-capacity-2 = 󰁾
-ramp-capacity-3 = 󰂀
-ramp-capacity-4 = 󰁹
+ramp-capacity-foreground = ${colors.green}
 
+ramp-capacity-0 = %{F#fb4934}󰁺%{F-}
+ramp-capacity-1 = %{F#fb4934}󰁼%{F-}
+ramp-capacity-2 = %{F#fabd2f}󰁾%{F-}
+ramp-capacity-3 = %{F#b8bb26}󰂀%{F-}
+ramp-capacity-4 = %{F#b8bb26}󰁹%{F-}
+
+animation-charging-foreground = ${colors.green}
 animation-charging-0 = 󰂆
 animation-charging-1 = 󰂈
 animation-charging-2 = 󰂉
@@ -150,28 +146,25 @@ type = internal/date
 interval = 1
 date = %a %b %d
 label = %date%
-label-foreground = ${colors.primary}
+label-foreground = ${colors.warning}
 
 [module/time]
 type = internal/date
 interval = 1
 date = %I:%M %p
 label = %date%
-label-foreground = ${colors.primary}
+label-foreground = ${colors.warning}
 
 [module/spotify]
 type = custom/script
 exec = ~/.config/polybar/scripts/spotify.sh
 interval = 0.1 
 format-prefix = "  "
-format-prefix-foreground = #1DB954
+format-prefix-foreground = ${colors.green}
 
 [module/youtube]
 type = custom/script
 tail = true
 interval = 1
 exec = ~/.config/polybar/scripts/youtube.sh
-click-left = playerctl -l | grep -v "spotify" | xargs -I {} playerctl -p {} play-pause
-
-screenchange-reload = true
-pseudo-transparency = true
+format-prefix-foreground = ${colors.alert}

@@ -20,6 +20,9 @@ alias ls='EZA_COLORS="ur=0:uw=0:ux=0:gr=0:gw=0:gx=0:tr=0:tw=0:tx=0:di=1;38;2;69;
 
 alias lsa='EZA_COLORS="ur=0:uw=0:ux=0:gr=0:gw=0:gx=0:tr=0:tw=0:tx=0:di=1;38;2;69;133;136:tw=1;38;2;69;133;136:tm=1;38;2;69;133;136:ln=1;38;2;69;133;136:no=38;2;69;133;136" eza -al --icons --color=always'
 
+alias tree-git='eza -aT --color=always --icons'
+alias tree='eza -aT --color=always --icons --git-ignore'
+
 set -gx XDG_DATA_DIRS \
   $HOME/.local/share/flatpak/exports/share \
   /var/lib/flatpak/exports/share \

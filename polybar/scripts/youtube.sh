@@ -12,9 +12,9 @@ if [ -n "$player" ]; then
         artist=$(playerctl -p "$player" metadata xesam:artist | paste -sd ", " -)
 
         if [ -n "$artist" ]; then
-            echo "%{F#FF0000}󰗃 %{F-} $icon $title - $artist"
+            echo "%{F#fb4934}󰗃 %{F-} $icon $title - $artist"
         else
-            echo "%{F#FF0000}󰗃 %{F-} $icon $title"
+            echo "%{F#fb4934}󰗃 %{F-} $icon $title"
         fi
     else
         echo ""
