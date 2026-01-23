@@ -173,6 +173,5 @@ interval = 1
 exec = ~/.config/polybar/scripts/youtube.sh
 click-left = playerctl -l | grep -v "spotify" | xargs -I {} playerctl -p {} play-pause
 
-[settings]
 screenchange-reload = true
 pseudo-transparency = true
