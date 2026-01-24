@@ -145,15 +145,13 @@ animation-charging-framerate = 750
 type = internal/date
 interval = 1
 date = %a %b %d
-label = %date%
-label-foreground = ${colors.warning}
+label = %{F#fabd2f} %{F-} %date%
 
 [module/time]
 type = internal/date
 interval = 1
 date = %I:%M %p
-label = %date%
-label-foreground = ${colors.warning}
+label = %{F#fabd24} %{F-} %date%
 
 [module/spotify]
 type = custom/script
