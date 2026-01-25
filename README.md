@@ -4,7 +4,4 @@
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e0986017-d061-452c-83f8-68af87d6f0f2" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b5a2c04f-9d4e-49b0-a5b9-ce15b57444e0" />
-
-(saving for r/unixporn lmfao)
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6ca4fdca-74e9-402d-b6d0-656b7f79e2c0" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0b7a7c2f-fe20-45b2-b52b-e0991fb4eff0" />
