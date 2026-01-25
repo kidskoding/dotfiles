@@ -73,12 +73,16 @@
     },
     
     "custom/spotify": {
-        "format": "<span color='#b8bb26'> </span> {}",
+        "format": "<span color='#b8bb26'> </span>{icon} {text}",
+        "format-icons": {
+            "Playing": "  ",
+            "Paused": "  "
+        },
         "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous",
-        "exec": "playerctl -p spotify metadata --format '{\"text\": \"{{title}} - {{artist}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' --follow",
+        "on-click": "playerctl -p spotify play-pause",
+        "on-scroll-up": "playerctl -p spotify next",
+        "on-scroll-down": "playerctl -p spotify previous",
+        "exec": "playerctl -p spotify metadata --format '{\"text\": \"{{title}} - {{artist}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "escape": true,
         "max-length": 40
     }
