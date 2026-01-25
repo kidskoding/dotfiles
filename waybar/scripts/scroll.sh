@@ -2,11 +2,20 @@
 
 WIDTH=35
 ALBUM_SCRIPT="$HOME/.config/waybar/scripts/get-album-cover.sh"
+COVER="/tmp/waybar_spotify/cover.png"
 
 get_status() { playerctl -p spotify status 2>/dev/null; }
 get_text() { playerctl -p spotify metadata --format '{{title}} - {{artist}}' 2>/dev/null; }
 
 while true; do
+    if ! hyprctl clients | grep -q "class: spotify"; then
+        rm "$COVER" 2>/dev/null
+        pkill -RTMIN+1 waybar
+        echo "Spotify is Offline!"
+        sleep 2
+        continue
+    fi
+    
     text=$(get_text)
     
     if [ -z "$text" ]; then
