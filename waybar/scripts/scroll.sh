@@ -56,6 +56,8 @@ while true; do
                 pos=$((pos + direction))
                 sleep 0.4
             else
+                pos=0 
+                direction=1
                 sleep 1
             fi
         fi
