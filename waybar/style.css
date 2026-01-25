@@ -1,0 +1,96 @@
+@define-color bg #282828;
+@define-color bg_alt #3c3836;
+@define-color fg #ebdbb2;
+@define-color warning #fabd2f;
+@define-color alert #fb4934;
+@define-color aqua #8ec07c;
+@define-color green #b8bb26;
+@define-color disabled #928374;
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", "Font Awesome 5 Free";
+    min-height: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+#waybar {
+    background: transparent;
+    color: @fg;
+}
+
+window#waybar {
+    background: transparent;
+    color: @fg;
+    margin: 2px 2px 2px 2px;
+}
+
+.modules-left {
+    background: @bg;
+    border-radius: 6px;
+    padding: 2px 10px;
+    margin: 4px;
+}
+
+.modules-right {
+    background: @bg;
+    border-radius: 6px;
+    padding: 2px 2px;
+    margin: 4px;
+}
+
+.modules-center {
+    background: transparent;
+}
+
+#workspaces {
+    padding-left: 0;
+    margin-left: 0;
+    border-radius: 6px;
+}
+
+#workspaces button {
+    padding: 0 4px;
+    margin: 3px 2px;
+    color: @fg;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    color: @bg;
+    background-color: @warning;
+}
+
+#workspaces button.urgent {
+    background-color: @alert;
+}
+
+#workspaces button:hover {
+    background: @bg_alt;
+}
+
+#custom-spotify {
+    background: @bg;
+    border-radius: 6px;
+    padding: 2px 12px;
+    margin: 4px;
+}
+
+#pulseaudio, #network, #backlight, #battery, #clock {
+    padding: 0 12px;
+    color: @fg;
+}
+
+#network, #backlight, #battery, #clock {
+    border-left: 1px solid rgba(146, 131, 116, 0.3);
+}
+
+#battery {
+    color: @fg;
+}
+
+#battery.charging, #battery.plugged {
+    animation: charging-pulse 2s ease-in-out infinite;
+}

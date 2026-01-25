@@ -1,0 +1,85 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 38,
+    "spacing": 0,
+    "margin-top": 4,
+    "margin-left": 4,
+    "margin-right": 4,
+    
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/spotify"],
+    "modules-right": ["pulseaudio", "network", "backlight", "battery", "clock#date", "clock#time"],
+    
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "sort-by-number": true
+    },
+    
+    "pulseaudio": {
+        "format": "<span color='#8ec07c'>{icon}</span> {volume}%",
+        "format-muted": "<span color='#fb4934'>󰝟</span> muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
+    },
+    
+    "network": {
+        "format-wifi": "<span color='#b8bb26'>󰖩 </span> {essid}",
+        "format-ethernet": "<span color='#b8bb26'>󰈀 </span> {ifname}",
+        "format-disconnected": "<span color='#fb4934'>󰤮 </span> disconnected",
+        "interval": 5
+    },
+    
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "<span color='#fabd2f'>{icon} </span> {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+    
+    "battery": {
+        "bat": "BAT0",
+        "adapter": "ADP1",
+        "full-at": 99,
+        "interval": 5,
+        "states": {
+            "good": 80,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<span color='#b8bb26'>{icon}</span> {capacity}%",
+        "format-charging": "<span color='#b8bb26'>󰂄</span> {capacity}%",
+        "format-plugged": "<span color='#b8bb26'>󰚥</span> {capacity}%",
+        "format-full": "<span color='#b8bb26'>󰁹</span> {capacity}%",
+        "format-good": "<span color='#b8bb26'>{icon}</span> {capacity}%",
+        "format-warning": "<span color='#fabd2f'>{icon}</span> {capacity}%",
+        "format-critical": "<span color='#fb4934'>{icon}</span> {capacity}%",
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
+    },
+    
+    "clock#date": {
+        "interval": 60,
+        "format": "<span color='#fabd2f'> </span> {:%a %b %d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    
+    "clock#time": {
+        "interval": 1,
+        "format": "<span color='#fabd2f'> </span> {:%I:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    
+    "custom/spotify": {
+        "format": "<span color='#b8bb26'> </span> {}",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "exec": "playerctl -p spotify metadata --format '{\"text\": \"{{title}} - {{artist}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' --follow",
+        "escape": true,
+        "max-length": 40
+    }
+}

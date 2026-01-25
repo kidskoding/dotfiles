@@ -2,7 +2,7 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 if status is-login
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1 
-        exec startx 
+        exec Hyprland
     end 
 end
 
@@ -30,3 +30,4 @@ set -gx XDG_DATA_DIRS \
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/anirudh/projects/pm-agent/google-cloud-sdk/path.fish.inc' ]; . '/home/anirudh/projects/pm-agent/google-cloud-sdk/path.fish.inc'; end
+
