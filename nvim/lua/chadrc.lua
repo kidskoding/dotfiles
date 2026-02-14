@@ -9,7 +9,12 @@ M.base46 = {
   -- theme = "palefire"
   -- theme = "kanagawa",
   -- theme = "melange",
-  theme = "gruvbox"
+  theme = "gruvbox",
+  LspInlayHint = {
+    fg = "#665c54",
+    bg = "NONE",
+    italic = true
+  },
   -- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },

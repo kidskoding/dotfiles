@@ -28,12 +28,8 @@ vim.lsp.config("rust_analyzer", {
   capabilities = nvlsp.capabilities,
   settings = {
     ["rust-analyzer"] = {
-      cargo = {
-        allFeatures = true,
-      },
-      check = {
-        command = "clippy",
-      },
+      cargo = { allFeatures = true, },
+      check = { command = "clippy", },
       assist = {
         importGranularity = "module",
         importPrefix = "by_self",
