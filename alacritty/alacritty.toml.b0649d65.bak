@@ -63,6 +63,5 @@ bindings = [
   { key = "B", mods = "Control|Shift", action = "SearchBackward" },
   { key = "Key0", mods = "Control", action = "ResetFontSize" },
   { key = "PageUp", mods = "Shift", action = "ScrollPageUp" },
-  { key = "PageDown", mods = "Shift", action = "ScrollPageDown" },
-  { key = "Return", mods = "Shift", chars = "\u001B\r" }
+  { key = "PageDown", mods = "Shift", action = "ScrollPageDown" }
 ]
