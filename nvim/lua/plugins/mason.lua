@@ -17,8 +17,6 @@ return {
 
         -- formatters
         "stylua",
-        "black",
-        "prettier",
       },
     },
 

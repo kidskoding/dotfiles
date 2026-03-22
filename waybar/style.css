@@ -1,11 +1,11 @@
-@define-color bg #282828;
-@define-color bg_alt #3c3836;
-@define-color fg #ebdbb2;
-@define-color warning #fabd2f;
-@define-color alert #fb4934;
-@define-color aqua #8ec07c;
-@define-color green #b8bb26;
-@define-color disabled #928374;
+@define-color bg #1e1e2e;
+@define-color bg_alt #313244;
+@define-color fg #cdd6f4;
+@define-color warning #f9e2af;
+@define-color alert #f38ba8;
+@define-color aqua #94e2d5;
+@define-color green #a6e3a1;
+@define-color disabled #6c7086;
 
 * {
     font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", "Font Awesome 5 Free";
@@ -44,7 +44,7 @@ window#waybar {
 }
 
 .modules-center {
-    background-color: #282828;
+    background-color: #1e1e2e;
     border-radius: 10px;
     margin: 4px 0px;
     padding: 0px 8px;
@@ -115,7 +115,7 @@ window#waybar {
 }
 
 #network, #backlight, #battery, #clock {
-    border-left: 1px solid rgba(146, 131, 116, 0.3);
+    border-left: 1px solid rgba(108, 112, 134, 0.3);
 }
 
 #battery {

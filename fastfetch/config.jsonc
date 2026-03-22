@@ -3,7 +3,7 @@
   "logo": {
     "type": "small",
     "color": {
-      "1": "blue"
+      "1": "38;2;0;204;255"
     },
     "width": 5,
     "padding": {

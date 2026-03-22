@@ -6,45 +6,45 @@
     "margin-top": 4,
     "margin-left": 4,
     "margin-right": 4,
-    
+
     "modules-left": ["hyprland/workspaces"],
     "modules-center": [
         "custom/spotify-icon",
         "custom/spotify-playstate",
-        "image#album-cover", 
+        "image#album-cover",
         "custom/spotify-text"
     ],
     "modules-right": ["pulseaudio", "network", "backlight", "battery", "clock#date", "clock#time"],
-    
+
     "hyprland/workspaces": {
         "format": "{id}",
         "on-click": "activate",
         "all-outputs": true,
         "sort-by-number": true
     },
-    
+
     "pulseaudio": {
-        "format": "<span color='#8ec07c'>{icon}</span> {volume}%",
-        "format-muted": "<span color='#fb4934'>󰝟</span> muted",
+        "format": "<span color='#a6e3a1'>{icon}</span> {volume}%",
+        "format-muted": "<span color='#f38ba8'>󰝟</span> muted",
         "format-icons": {
             "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol"
     },
-    
+
     "network": {
-        "format-wifi": "<span color='#b8bb26'>󰖩 </span> {essid}",
-        "format-ethernet": "<span color='#b8bb26'>󰈀 </span> {ifname}",
-        "format-disconnected": "<span color='#fb4934'>󰤮 </span> disconnected",
+        "format-wifi": "<span color='#89b4fa'>󰖩 </span> {essid}",
+        "format-ethernet": "<span color='#89b4fa'>󰈀 </span> {ifname}",
+        "format-disconnected": "<span color='#f38ba8'>󰤮 </span> disconnected",
         "interval": 5
     },
-    
+
     "backlight": {
         "device": "intel_backlight",
-        "format": "<span color='#fabd2f'>{icon} </span> {percent}%",
+        "format": "<span color='#f9e2af'>{icon} </span> {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"]
     },
-    
+
     "battery": {
         "bat": "BAT0",
         "adapter": "ADP1",
@@ -55,39 +55,39 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "<span color='#b8bb26'>{icon}</span> {capacity}%",
-        "format-charging": "<span color='#b8bb26'>󰂄</span> {capacity}%",
-        "format-plugged": "<span color='#b8bb26'>󰚥</span> {capacity}%",
-        "format-full": "<span color='#b8bb26'>󰁹</span> {capacity}%",
-        "format-good": "<span color='#b8bb26'>{icon}</span> {capacity}%",
-        "format-warning": "<span color='#fabd2f'>{icon}</span> {capacity}%",
-        "format-critical": "<span color='#fb4934'>{icon}</span> {capacity}%",
+        "format": "<span color='#a6e3a1'>{icon}</span> {capacity}%",
+        "format-charging": "<span color='#a6e3a1'>󰂄</span> {capacity}%",
+        "format-plugged": "<span color='#a6e3a1'>󰚥</span> {capacity}%",
+        "format-full": "<span color='#a6e3a1'>󰁹</span> {capacity}%",
+        "format-good": "<span color='#a6e3a1'>{icon}</span> {capacity}%",
+        "format-warning": "<span color='#f9e2af'>{icon}</span> {capacity}%",
+        "format-critical": "<span color='#f38ba8'>{icon}</span> {capacity}%",
         "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
     },
-    
+
     "clock#date": {
         "interval": 60,
-        "format": "<span color='#fabd2f'> </span> {:%a %b %d}",
+        "format": "<span color='#f9e2af'>󰃭 </span> {:%a %b %d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
-    
+
     "clock#time": {
         "interval": 1,
-        "format": "<span color='#fabd2f'> </span> {:%I:%M %p}",
+        "format": "<span color='#f9e2af'>󰥔 </span> {:%I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
     "custom/spotify-icon": {
-        "format": "<span color='#b8bb26'></span>",
+        "format": "<span color='#a6e3a1'></span>",
         "tooltip": false
     },
-   
+
     "custom/spotify-playstate": {
         "format": "{icon}",
         "return-type": "json",
         "format-icons": {
-            "Playing": "  ",
-            "Paused": "  "
+            "Playing": " ",
+            "Paused": " "
         },
         "exec-if": "pgrep spotify",
         "exec": "playerctl -p spotify metadata --format '{\"alt\": \"{{status}}\"}' -F",

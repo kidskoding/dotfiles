@@ -1,3 +1,9 @@
+if status is-login
+    if test (tty) = /dev/tty1
+        exec start-hyprland
+    end
+end
+
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 starship init fish | source
