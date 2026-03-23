@@ -14,6 +14,22 @@ return {
         "css-lsp",
         "fish-lsp",
         "texlab",
+        "ruby-lsp",
+        "omnisharp",
+
+        -- highly recommended
+        "typescript-language-server",
+        "bash-language-server",
+        "json-lsp",
+        "yaml-language-server",
+
+        -- worth having
+        "marksman",
+        "dockerfile-language-server",
+        "kotlin-language-server",
+        "taplo",
+        "sqls",
+        "intelephense",
 
         -- formatters
         "stylua",

@@ -12,6 +12,8 @@ source "$HOME/.cargo/env.fish"
 
 pyenv init - fish | source
 
+rbenv init - fish | source
+
 if type -q nvm
     nvm use default --silent
 end
