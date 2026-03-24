@@ -1,6 +1,14 @@
 if status is-login
     if test (tty) = /dev/tty1
-        exec start-hyprland
+        echo "1) Hyprland"
+        echo "2) KDE Plasma"
+        read --prompt-str "Session: " choice
+        switch $choice
+            case 2
+                exec startplasma-wayland
+            case '*'
+                exec start-hyprland
+        end
     end
 end
 
