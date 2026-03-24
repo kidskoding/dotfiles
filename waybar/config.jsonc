@@ -11,7 +11,6 @@
     "modules-center": [
         "custom/spotify-icon",
         "custom/spotify-playstate",
-        "image#album-cover",
         "custom/spotify-text"
     ],
     "modules-right": ["pulseaudio", "network", "backlight", "battery", "clock#date", "clock#time"],
@@ -93,13 +92,6 @@
         "exec": "playerctl -p spotify metadata --format '{\"alt\": \"{{status}}\"}' -F",
         "on-click": "playerctl -p spotify play-pause",
         "tooltip": false
-    },
-
-    "image#album-cover": {
-        "path": "/tmp/waybar_spotify/cover.png",
-        "size": 24,
-        "signal": 1,
-        "exec-if": "pgrep spotify"
     },
 
     "custom/spotify-text": {
