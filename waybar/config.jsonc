@@ -77,7 +77,7 @@
     },
 
     "custom/spotify-icon": {
-        "format": "<span color='#a6e3a1'></span>",
+        "format": "<span color='#a6e3a1'> </span>",
         "tooltip": false
     },
 
