@@ -1,7 +1,8 @@
 [general]
 # This imports your preferred theme colors first
 import = [
-  "./themes/catppuccin-mocha.toml"
+  "./themes/catppuccin-mocha.toml",
+  "./session-override.toml"
 ]
 live_config_reload = true
 working_directory = "None"
@@ -11,10 +12,11 @@ TERM = "xterm-256color"
 WINIT_X11_SCALE_FACTOR = "1"
 
 [window]
-dynamic_padding = true 
-decorations = "none" 
+dynamic_padding = true
+decorations = "none"
 title = "Alacritty@CachyOS"
 opacity = 0.8
+blur = true
 
 [window.dimensions]
 columns = 100
@@ -44,7 +46,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 save_to_clipboard = true
 
 [cursor]
-style = "Underline"
+style = "Block"
 thickness = 0.15
 unfocused_hollow = true
 

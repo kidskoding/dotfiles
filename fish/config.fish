@@ -5,8 +5,11 @@ if status is-login
         read --prompt-str "Session: " choice
         switch $choice
             case 2
+                echo '[window]
+decorations = "full"' > ~/.config/alacritty/session-override.toml
                 exec startplasma-wayland
             case '*'
+                echo '' > ~/.config/alacritty/session-override.toml
                 exec start-hyprland
         end
     end
