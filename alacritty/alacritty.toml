@@ -1,8 +1,7 @@
 [general]
-# This imports your preferred theme colors first
 import = [
   "./themes/catppuccin-mocha.toml",
-  "./session-override.toml"
+  "./decorations.toml"
 ]
 live_config_reload = true
 working_directory = "None"
@@ -13,7 +12,6 @@ WINIT_X11_SCALE_FACTOR = "1"
 
 [window]
 dynamic_padding = true
-decorations = "none"
 title = "Alacritty@CachyOS"
 opacity = 0.8
 blur = true
