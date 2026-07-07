@@ -1,0 +1,59 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "git_panel": {
+    "dock": "left",
+  },
+  "icon_theme": "Bearded Icons",
+  "vim_mode": true,
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "project_panel": {
+    "auto_fold_dirs": false,
+    "dock": "left",
+    "button": true,
+  },
+  "terminal": {
+    "dock": "bottom",
+    "button": true,
+  },
+  "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
+    },
+  },
+  "buffer_font_fallbacks": ["JetBrainsMono Nerd Font", "Menlo"],
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "colorize_brackets": false,
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry",
+    },
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light",
+    "dark": "Gruvbox Dark",
+  },
+  "tabs": {
+    "file_icons": true,
+    "show_diagnostics": "all",
+  },
+}
