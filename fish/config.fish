@@ -1,19 +1,3 @@
-if status is-login
-    if test (tty) = /dev/tty1
-        echo "1) Hyprland"
-        echo "2) KDE Plasma"
-        read --prompt-str "Session: " choice
-        switch $choice
-            case 2
-                echo '[window]
-decorations = "full"' > ~/.config/alacritty/session-override.toml
-                exec startplasma-wayland
-            case '*'
-                echo '' > ~/.config/alacritty/session-override.toml
-                exec start-hyprland
-        end
-    end
-end
 
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 
@@ -29,9 +13,11 @@ if type -q nvm
     nvm use default --silent
 end
 
-alias ls='EZA_COLORS="ur=0:uw=0:ux=0:gr=0:gw=0:gx=0:tr=0:tw=0:tx=0:di=1;38;2;69;133;136:tw=1;38;2;69;133;136:tm=1;38;2;69;133;136:ln=1;38;2;69;133;136:no=38;2;69;133;136" eza --icons --color=always'
+# Catppuccin Mocha eza colors
+set -gx EZA_COLORS "ur=0:uw=0:ux=0:gr=0:gw=0:gx=0:tr=0:tw=0:tx=0:no=38;2;205;214;244:fi=38;2;205;214;244:di=1;38;2;137;180;250:ln=38;2;137;220;235:lp=38;2;137;220;235:or=38;2;243;139;168:mi=38;2;243;139;168:ex=38;2;166;227;161:pi=38;2;250;179;135:so=38;2;245;194;231:bd=38;2;249;226;175:cd=38;2;148;226;213:su=1;38;2;235;160;172:sg=38;2;235;160;172:st=38;2;116;199;236:ow=38;2;180;190;254:tw=1;38;2;180;190;254:sn=38;2;250;179;135:sb=38;2;127;132;156:da=38;2;116;199;236:hd=1;38;2;203;166;247:im=38;2;166;227;161:vi=38;2;203;166;247:mu=38;2;148;226;213:lo=38;2;148;226;213:cr=38;2;243;139;168:do=38;2;137;180;250:co=38;2;250;179;135:tm=38;2;108;112;134"
 
-alias lsa='EZA_COLORS="ur=0:uw=0:ux=0:gr=0:gw=0:gx=0:tr=0:tw=0:tx=0:di=1;38;2;69;133;136:tw=1;38;2;69;133;136:tm=1;38;2;69;133;136:ln=1;38;2;69;133;136:no=38;2;69;133;136" eza -al --icons --color=always'
+alias ls='eza --icons --color=always'
+alias lsa='eza -al --icons --color=always'
 
 alias tree-git='eza -aT --color=always --icons'
 alias tree='eza -aT --color=always --icons --git-ignore'
